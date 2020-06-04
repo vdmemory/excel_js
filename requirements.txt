@@ -8,9 +8,3 @@ Webpack (imports/exports)
         - Prod
             Minifier JS & CSS
 Git
-
-
-git push -u origin master
-
-vdmemory
-123Qwerty_123
