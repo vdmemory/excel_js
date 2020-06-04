@@ -10,3 +10,7 @@ Webpack (imports/exports)
 Git
 
 
+git push -u origin master
+
+vdmemory
+123Qwerty_123
