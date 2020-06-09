@@ -1,0 +1,136 @@
+@import "variables";
+@import "mixins";
+
+.excel {
+    position: relative;
+    color: $base_color;
+    max-width: 100%;
+    &_header {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: $header_height;
+        padding: 8px 4px 0;
+        display: flex;
+        justify-content: space-between;
+        & .input {
+            margin: 0;
+            padding: 2px 7px;
+            color: black;
+            @include border(transparent);
+            border-radius: 2px;
+            height: 20px;
+            font-size: 18px;
+            line-height: 20px;
+            outline: none;
+            min-width: 1px;
+            &:hover {
+                @include border($border_hover_color);
+            }
+            &:focus {
+                @include border($border_focus_color);
+            }
+        }
+        & .button {
+            @include button($selected_color);
+        }
+    }
+    &_toolbar {
+        position: absolute;
+        top: $header_height;
+        right: 0;
+        left: 0;
+        height: $toolbar_height;
+        @include border($border_color);
+        border-left: none;
+        border-right: none;
+        padding: 7px 10px;
+        display: flex;
+        & .button {
+            @include button($selected_color);
+        }
+    }
+    &_formula {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: $header_height + $toolbar_height;
+        height: $formula_height;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $border_color;
+        & .info {
+            font-size: 18px;
+            text-align: center;
+            font-style: italic;
+            border-right: 1px solid $border_color;
+            min-width: $info_cell_width;
+        }
+        & .field{
+            padding: 0 4px;
+            font-size: 12px;
+            outline: none;
+            width: 100%;
+            height: $formula_height;
+            line-height: $formula_height;
+            color: black;
+        }
+    }
+    &_table {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: $header_height + $toolbar_height + $formula_height;
+        overflow: auto;
+        padding-bottom: 2px;
+        font-size: .8rem;
+        & .row {
+            display: flex;
+            flex-direction: row;
+            min-height: 20px;
+            height: $row_height;
+            &_info {
+                @include fl_center();
+                min-width: $info_cell_width;
+                height: 100%;
+                @include border($border_color);
+                border-top: none;
+                background: $bg_row_color;
+
+            }
+            &_data {
+                display: flex;
+            }
+            &_col {
+                @include fl_center();
+                background: $bg_row_color;
+                min-width: $base_min_width;
+                width: $cell_width;
+                @include border($border_color);
+                border-top: none;
+                border-left: none;
+                height: 100%;
+            }
+            &_cell {
+                min-width: $base_min_width;
+                padding: 5px;
+                width: $cell_width;
+                height: 100%;
+                line-height: normal;
+                @include border($border_cell_color);
+                border-top: none;
+                border-left: none;
+                color: black;
+                white-space: nowrap;
+                outline: none;
+                &.selected{
+                    border: none;
+                    outline: 2px solid $selected_color;
+                    z-index: 999;
+                }
+            }
+        }
+    }
+}
+

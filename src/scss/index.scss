@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import "~normalize.css";
+
+@import "excel";
+@import "dashboard";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+h1 {
+    font-weight: 300;
+}
+
+.layout {
+    max-width: $layout_width;
+    margin: 0 auto;
+}
