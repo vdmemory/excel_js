@@ -1,0 +1,30 @@
+/***height***/
+$header_height: 34px;
+$toolbar_height: 40px;
+$formula_height: 24px;
+$row_height: 24px;
+$board_header_height: 64px;
+$board_new_create_height: 160px;
+
+/***width***/
+$base_min_width: 40px;
+$info_cell_width: 40px;
+$cell_width: 120px;
+$layout_width: 1024px;
+
+/***color***/
+$base_color: #888888;
+$base_color2: #3c74ff;
+$board_table_hover_color: #e6f4ea;
+$board_table_color: #202124;
+$border_color: #c0c0c0;
+$border_hover_color: #c0c0c0;
+$border_focus_color: #3c74ff;
+$border_cell_color: #e2e3e3;
+$bg_row_color: #f8f9fa;
+$selected_color: #3c74ff;
+$border_hover_color2: #3c74ff;
+$bg_board_new_color: #dadce0;
+
+/***shadow***/
+$board_header_shadow: 0 2px 5px 2px rgba(60, 64, 67, .15)
